@@ -1,7 +1,7 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
-const dotenv = require("dotenv");
+import express from "express";
+import nodemailer from "nodemailer";
+import cors from "cors";
+import dotenv from "dotenv";
 
 // Load environment variables
 dotenv.config();
@@ -55,4 +55,4 @@ app.post("/api/send-email", (req, res) => {
   });
 });
 
-module.exports = app;
+export default app;
