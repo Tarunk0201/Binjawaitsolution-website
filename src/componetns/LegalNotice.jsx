@@ -321,10 +321,16 @@ const LegalNotice = () => {
                   <Mail size={16} /> binjwaitsolutions@gmail.com
                 </a>
                 <a
-                  href="tel:+917974147736"
+                  href="tel:9826656189"
                   className="flex items-center gap-3 hover:text-orange-400 transition-colors"
                 >
                   <Phone size={16} /> +91 98266 56189
+                </a>
+                <a
+                  href="tel:8103174722"
+                  className="flex items-center gap-3 hover:text-orange-400 transition-colors"
+                >
+                  <Phone size={16} /> +91 81031 74722
                 </a>
                 <a
                   href="https://www.binjwaitsolutions.com"

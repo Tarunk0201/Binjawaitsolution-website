@@ -98,6 +98,9 @@ const ContactPage = () => {
                 <span className="text-gray-700 font-medium">
                   +91 98266 56189
                 </span>
+                <span className="text-gray-700 font-medium">
+                  +91 81031 74722
+                </span>
               </div>
 
               <div className="flex items-center gap-4 group">

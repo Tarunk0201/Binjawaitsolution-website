@@ -133,11 +133,11 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
             <a
-              href="tel:+917974147736"
+              href="tel:8103174722"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium text-sm transition-colors shadow-md"
             >
               <Phone size={16} />
-              <span>+91 98266 56189</span>
+              <span>+91 81031 74722</span>
             </a>
           </div>
 
