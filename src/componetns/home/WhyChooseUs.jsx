@@ -11,10 +11,10 @@ import {
 } from "lucide-react";
 import allInOne from "../../assets/images/All-in-One.jpg";
 import solutions from "../../assets/images/chooseimage2.jpg";
-import team from "../../assets/images/type-4.png";
-import finance from "../../assets/images/chooseimage3.png";
-import values from "../../assets/images/Hire-our-people.jpg";
-import support from "../../assets/images/itservices.jpg";
+import team from "../../assets/images/type-4.jpg";
+import finance from "../../assets/images/chooseimage3.jpg";
+import values from "../../assets/images/Hire-our-people.png";
+import support from "../../assets/images/itservices.png";
 
 const whyChooseData = [
   {
@@ -143,7 +143,7 @@ const FeatureCard = ({ feature }) => (
 
     {/* Right Visual/Image */}
     <div className="flex-1 w-full flex justify-center items-center">
-      <motion.div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/10 border-[6px] border-white max-w-md">
+      <motion.div className="relative rounded-xl overflow-hidden border-[6px] border-white max-w-md">
         <img
           src={feature.image}
           alt={feature.title}

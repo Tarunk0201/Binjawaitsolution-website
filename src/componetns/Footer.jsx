@@ -21,12 +21,10 @@ const Footer = () => {
   ];
 
   const serviceAreas = [
-    { name: "Website building", path: "/services/website-building" },
-    { name: "Application Development", path: "/services/app-development" },
-    { name: "AI Services", path: "/services/ai-services" },
-    { name: "CRM Development", path: "/services/crm-development" },
-    { name: "Digital Marketing", path: "/services/digital-marketing" },
-    { name: "Compliance Solutions", path: "/services/compliance-solutions" },
+    { name: "AI Services", path: "/ai-solutions" },
+    { name: "Website building", path: "/full-stack-development" },
+    { name: "Compliance Solutions", path: "/compliance" },
+    { name: "Digital Marketing", path: "/digital-marketing" },
   ];
 
   const socialLinks = [
@@ -122,13 +120,28 @@ const Footer = () => {
                   301, Atulya IT park, Indore, Madhya Pradesh, India
                 </span>
               </li>
+              <li className="flex items-start gap-3">
+                <MapPin size={16} className="text-white mt-1 shrink-0" />
+                <span className="text-white">
+                  Block B, Tf-14, Signet Plaza, Gotri, Vadodara, Gujarat. India
+                </span>
+              </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-white shrink-0" />
                 <a
-                  href="mailto:contact@fixflow.com"
+                  href="mailto: binjwaitsolutions@gmail.com"
                   className="text-white hover:text-white transition-colors"
                 >
                   binjwaitsolutions@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={16} className="text-white shrink-0" />
+                <a
+                  href="mailto:info@binjwaitsolutions.com"
+                  className="text-white hover:text-white transition-colors"
+                >
+                  info@binjwaitsolutions.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -139,11 +152,23 @@ const Footer = () => {
                 >
                   +91 98266 56189
                 </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={16} className="text-white shrink-0" />
                 <a
                   href="tel:8103174722"
                   className="text-white hover:text-white transition-colors"
                 >
                   +91 81031 74722
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={16} className="text-white shrink-0" />
+                <a
+                  href="tel:7974147736"
+                  className="text-white hover:text-white transition-colors"
+                >
+                  +91 7974147736
                 </a>
               </li>
             </ul>

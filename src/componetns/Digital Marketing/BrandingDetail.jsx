@@ -30,7 +30,7 @@ export default function BrandingDetail() {
   return (
     <section
       id="branding-domain"
-      className="py-24 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
         {/* Left Visual: Using 'Hire-our-people.jpg' to represent creative planning */}
@@ -42,11 +42,11 @@ export default function BrandingDetail() {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <div className="rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
+            <div className="rounded-[2.5rem] overflow-visible bg-[#fdf2f0] origin-center mt-28">
               <img
                 src={graphic}
                 alt="Creative Branding Session"
-                className="w-full h-auto object-cover aspect-video hover:scale-105 transition-transform duration-700"
+                className="w-[92%] mx-auto h-auto object-contain aspect-[5/4] transition-transform duration-700"
               />
             </div>
           </motion.div>
@@ -94,9 +94,6 @@ export default function BrandingDetail() {
             ))}
           </div>
 
-          <button className="mt-10 flex items-center gap-3 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200">
-            Define Your Brand <ArrowRight size={20} />
-          </button>
         </motion.div>
       </div>
     </section>

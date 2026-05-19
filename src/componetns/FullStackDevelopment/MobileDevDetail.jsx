@@ -36,7 +36,7 @@ const MobileDevDetail = () => {
   return (
     <section
       id="mobile-dev"
-      className="py-24 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         {/* Left Content: The Problem/Solution Messaging */}
@@ -81,9 +81,6 @@ const MobileDevDetail = () => {
             ))}
           </div>
 
-          <button className="mt-10 flex items-center gap-3 bg-red-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-red-600 transition-all shadow-lg hover:shadow-red-200">
-            Launch Your App <ArrowRight size={20} />
-          </button>
         </motion.div>
 
         {/* Right Visual Side */}
@@ -98,7 +95,7 @@ const MobileDevDetail = () => {
             className="relative z-10"
           >
             {/* Main Mockup Container */}
-            <div className="bg-white rounded-4xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] w-full max-w-[320px] mx-auto overflow-hidden aspect-9/19">
+            <div className="bg-white rounded-4xl w-full max-w-[320px] mx-auto overflow-hidden aspect-9/19">
               <img
                 src={mob}
                 alt="Mobile App Interface"

@@ -4,7 +4,7 @@ import focus from "../../assets/images/focus.png";
 
 export default function FullStackHero() {
   return (
-    <section className="relative py-24 px-8 lg:px-16 bg-white text-black overflow-hidden flex lg:h-screen justify-center items-center">
+    <section className="relative py-12 px-8 lg:px-16 bg-white text-black overflow-hidden flex lg:h-screen justify-center items-center">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -29,12 +29,8 @@ export default function FullStackHero() {
         </motion.div>
 
         <div className="lg:w-1/2 relative">
-          <div className="absolute inset-0 bg-orange-500/10 blur-[120px] rounded-full" />
-          <img
-            src={focus}
-            alt="Development Focus"
-            className="relative z-10 rounded-4xl border border-white/10 shadow-2xl"
-          />
+          <div className="absolute inset-0  rounded-full" />
+          <img src={focus} alt="Development Focus" className="relative z-10 " />
         </div>
       </div>
     </section>

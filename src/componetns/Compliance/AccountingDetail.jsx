@@ -5,15 +5,44 @@ import {
   BarChart3,
   Landmark,
   Calculator,
-  ArrowRight,
+  ShieldCheck,
+  UserCheck,
 } from "lucide-react";
 import wer from "../../assets/images/wer.jpg";
 
 export function AccountingDetail() {
+  const accountingServices = [
+    {
+      title: "Accounting & Bookkeeping",
+      desc: "Daily ledger maintenance and error-free cash flow tracking.",
+      icon: <Calculator size={18} />,
+    },
+    {
+      title: "Audit Services",
+      desc: "Independent internal and statutory audits to verify records.",
+      icon: <ShieldCheck size={18} />,
+    },
+    {
+      title: "Financial Statement Preparation",
+      desc: "P&L accounts, balance sheets, and cash flow reports generated instantly.",
+      icon: <Landmark size={18} />,
+    },
+    {
+      title: "Project Report for Loans",
+      desc: "High-conviction CMA data and reports optimized for bank approvals.",
+      icon: <BarChart3 size={18} />,
+    },
+    {
+      title: "CA Consultation Services",
+      desc: "On-demand strategic advice for tax savings and business structure planning.",
+      icon: <UserCheck size={18} />,
+    },
+  ];
+
   return (
     <section
       id="accounting-finance"
-      className="py-24 px-8 lg:px-16 bg-[#fcfaf7] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#fcfaf7] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         {/* Right Content */}
@@ -37,42 +66,38 @@ export function AccountingDetail() {
             <span className="text-amber-600">Confident decisions.</span>
           </h2>
 
-          <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-            We solve the "black hole" of business spending. Our CA consultation
-            and auditing services provide a 360-degree view of your financial
-            standing, making loan approvals and audits effortless.
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            We solve the "black hole" of business spending. Our professional
+            financial management and consulting services provide a 360-degree
+            view of your standing, making loan approvals and regulatory audits
+            effortless.
           </p>
 
-          <div className="space-y-4">
-            {[
-              {
-                title: "Bookkeeping & Financial Statements",
-                icon: <Calculator size={18} />,
-              },
-              {
-                title: "Audit & Tax Consultation",
-                icon: <Landmark size={18} />,
-              },
-              {
-                title: "Project Reports for Business Loans",
-                icon: <BarChart3 size={18} />,
-              },
-            ].map((item, i) => (
+          {/* Clean, detailed list layout */}
+          <div className="space-y-3">
+            {accountingServices.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-amber-100 shadow-sm"
+                className="flex items-start gap-4 bg-white p-4 rounded-xl border border-amber-100 shadow-sm transition-all hover:border-amber-300"
               >
-                <div className="text-amber-600">{item.icon}</div>
-                <span className="text-gray-700 font-bold text-sm">
-                  {item.title}
-                </span>
+                <div className="text-amber-600 shrink-0 mt-0.5">
+                  {item.icon}
+                </div>
+                <div>
+                  <span className="text-gray-700 font-bold text-sm block mb-0.5">
+                    {item.title}
+                  </span>
+                  <p className="text-xs text-gray-500 leading-tight">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </motion.div>
 
         {/* Left Visual */}
-        <div className="lg:w-1/2 relative lg:sticky lg:top-24">
+        <div className="lg:w-1/2 relative lg:sticky lg:top-20">
           <div className="absolute -inset-10 bg-amber-500/5 rounded-full blur-3xl" />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

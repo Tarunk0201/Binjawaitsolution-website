@@ -38,7 +38,7 @@ export default function AnalyticsDetail() {
   return (
     <section
       id="platforms-domain"
-      className="py-24 px-8 lg:px-16 bg-white scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-white scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         {/* Visual: Using 'itservices.webp' for a tech-focused feel */}
@@ -50,7 +50,7 @@ export default function AnalyticsDetail() {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <div className="rounded-[2.5rem] overflow-hidden border-8 border-gray-50 shadow-2xl">
+            <div className="rounded-[2.5rem] overflow-hidden border-8 border-gray-50">
               <img
                 src={Analytics}
                 alt="Marketing Analytics Dashboard"
@@ -116,9 +116,6 @@ export default function AnalyticsDetail() {
             ))}
           </div>
 
-          <button className="mt-10 flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all shadow-lg hover:shadow-green-200">
-            View Analytics Suite <ArrowRight size={20} />
-          </button>
         </motion.div>
       </div>
     </section>

@@ -38,7 +38,7 @@ const journeyData = [
 
 const JourneyTimeline = () => {
   return (
-    <section className="py-24 px-8 lg:px-16 bg-[#fdf2f0] text-black overflow-hidden">
+    <section className="py-12 px-8 lg:px-16 bg-[#fdf2f0] text-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-24">
@@ -90,7 +90,7 @@ const JourneyTimeline = () => {
                   viewport={{ once: true }}
                   className="absolute left-1/2 transform -translate-x-1/2 z-10 hidden lg:block"
                 >
-                  <div className="w-24 h-24 rounded-full border-4 border-white/10 overflow-hidden shadow-2xl">
+                  <div className="w-24 h-24 rounded-full border-4 border-white/10 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}

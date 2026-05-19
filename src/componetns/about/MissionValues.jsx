@@ -61,7 +61,7 @@ const MissionValues = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative rounded-4xl overflow-hidden border-4 border-white shadow-2xl z-10"
+            className="relative rounded-4xl overflow-hidden border-4 border-white z-10"
           >
             <img
               src={missionData.image}

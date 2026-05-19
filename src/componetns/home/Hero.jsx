@@ -87,7 +87,7 @@ const Hero = () => {
           variants={textItemVariants}
           className="flex items-center gap-4"
         >
-          <div className="flex -space-x-2">
+          {/* <div className="flex -space-x-2">
             <img
               className="w-10 h-10 rounded-full border-2 border-white"
               src="https://i.pravatar.cc/150?img=48"
@@ -106,7 +106,7 @@ const Hero = () => {
           </div>
           <div className="text-sm">
             <p className="font-bold">1K+ Customer Review</p>
-          </div>
+          </div> */}
         </motion.div>
       </motion.div>
     </div>
