@@ -16,12 +16,12 @@ const statsData = {
       description:
         "Our commitment to excellence is reflected in our high customer satisfaction rate based on recent surveys.",
     },
-    {
-      value: "3 Years",
-      label: "In Business",
-      description:
-        "Celebrating a 3 Years of innovation, growth, and building strong relationships in the industry.",
-    },
+    // {
+    //   value: "3 Years",
+    //   label: "In Business",
+    //   description:
+    //     "Celebrating a 3 Years of innovation, growth, and building strong relationships in the industry.",
+    // },
   ],
 };
 
@@ -64,7 +64,7 @@ const StatsSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {statsData.stats.map((item, index) => (
             <motion.div
