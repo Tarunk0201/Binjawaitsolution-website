@@ -81,12 +81,6 @@ const Hero = () => {
             </button>
           </Link>
         </motion.div>
-
-        {/* Customer Reviews */}
-        <motion.div
-          variants={textItemVariants}
-          className="flex items-center gap-4"
-        ></motion.div>
       </motion.div>
     </div>
   );

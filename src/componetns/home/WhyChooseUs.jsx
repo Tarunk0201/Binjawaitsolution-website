@@ -143,7 +143,7 @@ const FeatureCard = ({ feature }) => (
 
     {/* Right Visual/Image */}
     <div className="flex-1 w-full flex justify-center items-center">
-      <motion.div className="relative rounded-xl overflow-hidden shadow-2xl shadow-black/10 border-[6px] border-white max-w-md">
+      <motion.div className="relative rounded-xl overflow-hidden border-[6px] border-white max-w-md">
         <img
           src={feature.image}
           alt={feature.title}

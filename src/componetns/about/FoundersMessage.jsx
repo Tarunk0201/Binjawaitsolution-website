@@ -61,7 +61,7 @@ const FoundersMessage = () => {
               {/* Image Column with Decorative Elements */}
               <div className="lg:w-1/4 relative group">
                 <div className="absolute -inset-4 border border-white/10 rounded-4xl transition-transform duration-500 group-hover:scale-105" />
-                <div className="relative aspect-4/5 overflow-hidden rounded-4xl border-4 border-white/5 shadow-2xl">
+                <div className="relative aspect-4/5 overflow-hidden rounded-4xl border-4 border-white/5">
                   <img
                     src={founder.image}
                     alt={founder.name}

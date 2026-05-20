@@ -90,7 +90,7 @@ const JourneyTimeline = () => {
                   viewport={{ once: true }}
                   className="absolute left-1/2 transform -translate-x-1/2 z-10 hidden lg:block"
                 >
-                  <div className="w-24 h-24 rounded-full border-4 border-white/10 overflow-hidden shadow-2xl">
+                  <div className="w-24 h-24 rounded-full border-4 border-white/10 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}

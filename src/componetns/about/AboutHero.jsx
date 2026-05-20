@@ -74,7 +74,7 @@ const AboutHero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="absolute top-0 right-0 w-2/3 md:w-3/5 aspect-video rounded-2xl overflow-hidden border-4 border-white shadow-2xl z-20"
+            className="absolute top-0 right-0 w-2/3 md:w-3/5 aspect-video rounded-2xl overflow-hidden border-4 border-white z-20"
           >
             <img
               src={aboutHeroData.images[0].src}
@@ -88,7 +88,7 @@ const AboutHero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="absolute top-16 md:top-1/4 left-0 w-1/2 aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-2xl z-10"
+            className="absolute top-16 md:top-1/4 left-0 w-1/2 aspect-square rounded-2xl overflow-hidden border-4 border-white z-10"
           >
             <img
               src={aboutHeroData.images[1].src}
@@ -102,7 +102,7 @@ const AboutHero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="absolute bottom-0 md:bottom-0 right-10 w-1/2 aspect-square rounded-2xl overflow-hidden border-4 border-white shadow-2xl z-30"
+            className="absolute bottom-0 md:bottom-0 right-10 w-1/2 aspect-square rounded-2xl overflow-hidden border-4 border-white z-30"
           >
             <img
               src={aboutHeroData.images[2].src}
