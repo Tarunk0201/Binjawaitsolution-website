@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <Services />
       <WhyChooseUs />
       <Advantages />
