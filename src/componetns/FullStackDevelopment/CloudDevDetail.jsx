@@ -1,13 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Cloud,
-  Server,
-  Database,
-  Zap,
-  ShieldCheck,
-  ArrowRight,
-} from "lucide-react";
+import { Cloud, Server, Database, Zap, ShieldCheck } from "lucide-react";
 import aws from "../../assets/images/aws.png";
 
 const CloudDevDetail = () => {
@@ -37,7 +30,7 @@ const CloudDevDetail = () => {
   return (
     <section
       id="cloud-dev"
-      className="py-24 px-8 lg:px-16 bg-[#f7faf9] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#f7faf9] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         {/* Right Content: Technical Authority */}
@@ -84,10 +77,6 @@ const CloudDevDetail = () => {
               </div>
             ))}
           </div>
-
-          <button className="mt-10 flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all shadow-lg hover:shadow-green-200">
-            Optimize Your Infrastructure <ArrowRight size={20} />
-          </button>
         </motion.div>
 
         {/* Left Visual Side: Technical Stack */}
@@ -101,14 +90,12 @@ const CloudDevDetail = () => {
             className="relative z-10"
           >
             {/* Main Visual: Using image1 (type-4.png) to represent technical depth */}
-            <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl">
+            <div className="relative rounded-[2.5rem] overflow-hidden border-8 border-white origin-center w-3/4 mx-auto">
               <img
                 src={aws}
                 alt="Cloud Infrastructure Management"
-                className="w-full h-auto object-cover aspect-video grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                className=" aspect-[3/4] object-cover object-center grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
               />
-              {/* Dark Overlay for text legibility if needed */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent" />
             </div>
 
             {/* Floating Technical Status Badges */}

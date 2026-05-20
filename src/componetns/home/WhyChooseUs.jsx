@@ -11,10 +11,10 @@ import {
 } from "lucide-react";
 import allInOne from "../../assets/images/All-in-One.jpg";
 import solutions from "../../assets/images/chooseimage2.jpg";
-import team from "../../assets/images/type-4.png";
-import finance from "../../assets/images/chooseimage3.png";
-import values from "../../assets/images/Hire-our-people.jpg";
-import support from "../../assets/images/itservices.jpg";
+import team from "../../assets/images/type-4.jpg";
+import finance from "../../assets/images/chooseimage3.jpg";
+import values from "../../assets/images/Hire-our-people.png";
+import support from "../../assets/images/itservices.png";
 
 const whyChooseData = [
   {

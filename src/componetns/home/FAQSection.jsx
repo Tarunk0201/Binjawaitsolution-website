@@ -72,14 +72,14 @@ const SideBySideFAQ = () => {
 
   return (
     <section className="bg-[#f9f9f9] py-16 px-8 lg:px-16">
-      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-xs mb-4">
+      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-md mb-4">
         FAQs
       </p>
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           {/* Left Column - Massive Title */}
           <div className="lg:sticky lg:top-32">
-            <h2 className="text-[120px] font-sans font-medium leading-none tracking-tighter text-black md:text-[180px]">
+            <h2 className="text-[120px] font-sans font-medium leading-none tracking-tighter text-black">
               FAQs
             </h2>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import office from "../../assets/images/office.jpg";
+import office from "../../assets/images/office.jpeg";
 import img2 from "../../assets/images/img2.jpg";
 import img3 from "../../assets/images/img3.jpg";
 
@@ -46,9 +46,9 @@ const AboutHero = () => {
           <p className="text-xl text-gray-600 leading-relaxed max-w-xl mb-10">
             {aboutHeroData.subtext}
           </p>
-          <button className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-200">
+          {/* <button className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-200">
             {aboutHeroData.ctaText}
-          </button>
+          </button> */}
         </motion.div>
 
         {/* Right Image Collage */}

@@ -16,28 +16,28 @@ const servicesData = {
     "We specialize in delivering high-end digital infrastructure and automated solutions. Our methodical approach ensures that whether you are building a new platform or migrating an existing one, your business stays ahead of the curve.",
   services: [
     {
-      title: "Web & App Development Suite",
-      desc: "experiences, scalable mobile apps, and custom CRM systems with automated workflows to streamline your entire digital ecosystem.",
-      icon: <Code2 size={40} />,
-      path: "/full-stack-development",
-    },
-    {
       title: "Agentic AI Solutions",
       desc: "Autonomous AI agents that research, plan, and execute complex tasks to revolutionize your digital workflow.",
       icon: <Bot size={40} />,
       path: "/ai-solutions",
     },
     {
-      title: "Digital Marketing",
-      desc: "Data-driven SEO and strategic social campaigns designed to boost your visibility and maximize conversion rates.",
-      icon: <TrendingUp size={40} />,
-      path: "/digital-marketing",
+      title: "Web & App Development Suite",
+      desc: "experiences, scalable mobile apps, and custom CRM systems with automated workflows to streamline your entire digital ecosystem.",
+      icon: <Code2 size={40} />,
+      path: "/full-stack-development",
     },
     {
       title: "Compliance Solutions",
       desc: "Expert technical audits and secure frameworks ensuring your platforms meet all necessary industry legal standards.",
       icon: <ShieldCheck size={40} />,
       path: "/compliance",
+    },
+    {
+      title: "Digital Marketing",
+      desc: "Data-driven SEO and strategic social campaigns designed to boost your visibility and maximize conversion rates.",
+      icon: <TrendingUp size={40} />,
+      path: "/digital-marketing",
     },
   ],
 };
@@ -62,7 +62,7 @@ const itemVariants = {
 const Services = () => {
   return (
     <section className="py-16 px-8 lg:px-16 bg-gray-50 text-gray-900">
-      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-xs mb-4">
+      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-md mb-4">
         Services
       </p>
 

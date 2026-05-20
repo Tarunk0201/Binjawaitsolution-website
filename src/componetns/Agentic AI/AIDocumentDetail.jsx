@@ -7,7 +7,7 @@ export function AIDocumentDetail() {
   return (
     <section
       id="document-processing"
-      className="py-24 px-8 lg:px-16 bg-[#f7fafc] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#f7fafc] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         {/* Right Content */}
@@ -64,9 +64,6 @@ export function AIDocumentDetail() {
             ))}
           </div>
 
-          <button className="mt-10 flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg">
-            Start Intelligent Processing <ArrowRight size={20} />
-          </button>
         </motion.div>
 
         {/* Left Visual: Using itservices.webp for a technical/infrastructure feel */}
@@ -82,7 +79,7 @@ export function AIDocumentDetail() {
               <img
                 src={AIenabled}
                 alt="AI Document Processing"
-                className="rounded-[2.5rem]  shadow-2xl object-cover aspect-video grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                className="rounded-[2.5rem] object-cover aspect-video grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
               />
             </div>
 

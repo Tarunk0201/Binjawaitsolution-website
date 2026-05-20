@@ -35,7 +35,7 @@ const CRMDevDetail = () => {
   ];
 
   return (
-    <section id="crm-dev" className="py-24 px-8 lg:px-16 bg-white scroll-mt-20">
+    <section id="crm-dev" className="py-12 px-8 lg:px-16 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
         {/* Left Content: Business Problem Solving */}
         <motion.div
@@ -83,9 +83,6 @@ const CRMDevDetail = () => {
             ))}
           </div>
 
-          <button className="mt-10 flex items-center gap-3 bg-orange-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg hover:shadow-orange-200">
-            Build Your Custom CRM <ArrowRight size={20} />
-          </button>
         </motion.div>
 
         {/* Right Visual Side: Dashboard/Data Visualization Feel */}
@@ -96,7 +93,7 @@ const CRMDevDetail = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative z-10 p-4 bg-white rounded-[2.5rem] shadow-2xl border border-gray-100"
+            className="relative z-10 p-4 bg-white rounded-[2.5rem] border border-gray-100"
           >
             {/* Using your "chooseimage2" asset to represent complex data/strategy */}
             <div className="rounded-[1.8rem] overflow-hidden border-4 border-gray-50">

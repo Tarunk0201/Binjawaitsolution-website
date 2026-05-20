@@ -51,7 +51,7 @@ const itemVariants = {
 const Advantages = () => {
   return (
     <section className="py-8 px-8 lg:px-16 bg-white text-gray-900">
-      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-xs mb-4">
+      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-md mb-4">
         Advantages
       </p>
       <div className="max-w-7xl mx-auto text-center">

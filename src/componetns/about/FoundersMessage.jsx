@@ -25,7 +25,7 @@ const founders = [
 
 const FoundersMessage = () => {
   return (
-    <section className="py-24 px-8 lg:px-16 bg-white text-black overflow-hidden">
+    <section className="py-12 px-8 lg:px-16 bg-white text-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">

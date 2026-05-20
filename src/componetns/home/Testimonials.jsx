@@ -13,13 +13,13 @@ const testimonials = [
   // {
   //   type: "video",
   //   thumbnail: "https://picsum.photos/seed/picsum/400/500", // The image with the woman in the sweater
-  //   avatar: "https://i.pravatar.cc/150?img=32",
+  //   avatar: "https://i.pravatar.cc/150?img=11",
   //   name: "Pia Pahl",
   //   role: "Product Designer at Lightdash",
   // },
   {
     type: "text",
-    avatar: "https://i.pravatar.cc/150?img=11",
+    avatar: "https://i.pravatar.cc/150?img=32",
     text: "From branding to website design, every piece they created was on-point. Highly recommended for anyone looking for serious results with a creative touch.",
     name: "Divya Kapoor",
     role: "Hyderabad",
@@ -36,7 +36,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="py-16 bg-[#f3f3f3] overflow-hidden">
-      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-xs mb-4">
+      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-md mb-4">
         Testimonials
       </p>
       <div className="px-8 lg:px-16 mb-16">

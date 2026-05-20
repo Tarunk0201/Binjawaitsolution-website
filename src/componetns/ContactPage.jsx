@@ -82,13 +82,32 @@ const ContactPage = () => {
               Find Binjwa IT Solutions
             </h2>
             <div className="space-y-6">
-              <div className="flex items-center gap-4 group">
-                <div className="bg-orange-400 p-3 rounded-lg shadow-md group-hover:bg-orange-500 transition-colors">
-                  <MapPin size={24} className="text-white" />
+              <div className="space-y-1">
+                <div className="flex items-center gap-4 group">
+                  <div className="bg-orange-400 p-3 rounded-lg shadow-md group-hover:bg-orange-500 transition-colors">
+                    <MapPin size={24} className="text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">
+                    301, Atulya IT park, Indore, Madhya Pradesh, India
+                  </span>
                 </div>
-                <span className="text-gray-700 font-medium">
-                  301, Atulya IT park, Indore, Madhya Pradesh, India
-                </span>
+                <div className="flex items-center gap-4 group">
+                  <div className="bg-orange-400 p-3 rounded-lg shadow-md group-hover:bg-orange-500 transition-colors">
+                    <MapPin size={24} className="text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">
+                    Block B, Tf-14, Signet Plaza, Gotri, Vadodara, Gujarat.
+                    India
+                  </span>
+                </div>
+                {/* <div className="flex items-center gap-4 group">
+                  <div className="bg-orange-400 p-3 rounded-lg shadow-md group-hover:bg-orange-500 transition-colors">
+                    <MapPin size={24} className="text-white" />
+                  </div>
+                  <span className="text-gray-700 font-medium">
+                    301, Atulya IT park, Indore, Madhya Pradesh, India
+                  </span>
+                </div> */}
               </div>
 
               <div className="flex items-center gap-4 group">
@@ -96,10 +115,13 @@ const ContactPage = () => {
                   <Phone size={24} className="text-white" />
                 </div>
                 <span className="text-gray-700 font-medium">
-                  +91 98266 56189
+                  +91 9826656189
                 </span>
                 <span className="text-gray-700 font-medium">
-                  +91 81031 74722
+                  +91 8103174722
+                </span>
+                <span className="text-gray-700 font-medium">
+                  +91 7974147736
                 </span>
               </div>
 
@@ -109,6 +131,9 @@ const ContactPage = () => {
                 </div>
                 <span className="text-gray-700 font-medium">
                   binjwaitsolutions@gmail.com
+                </span>
+                <span className="text-gray-700 font-medium">
+                  info@binjwaitsolutions.com
                 </span>
               </div>
             </div>

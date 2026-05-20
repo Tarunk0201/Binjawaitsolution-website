@@ -23,16 +23,17 @@ const Navbar = () => {
     {
       name: "Services",
       subLinks: [
+        { name: "Agentic AI Solutions", href: "/ai-solutions" },
         {
           name: "Web & App Development Suite",
           href: "/full-stack-development",
         },
-        { name: "Agentic AI Solutions", href: "/ai-solutions" },
-        { name: "Digital Marketing", href: "/digital-marketing" },
         { name: "Compliance Solutions", href: "/compliance" },
+        { name: "Digital Marketing", href: "/digital-marketing" },
       ],
     },
-    // { name: "Blog", href: "/blog" },
+    // { name: "Blogs", href: "/blogs" },
+    // { name: "Jobs", href: "/jobs" },
     { name: "Contact", href: "/contact" },
   ];
 

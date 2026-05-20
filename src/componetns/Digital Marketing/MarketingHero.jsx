@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import marketingstrategy from "../../assets/images/marketingstrategy.jpg";
+import marketingstrategy from "../../assets/images/marketingstrategy.png";
 
 export default function MarketingHero() {
   return (
-    <section className="relative py-24 lg:h-screen px-8 lg:px-10 bg-[#EEEADA] text-black overflow-hidden flex justify-center items-center">
+    <section className="relative py-12 lg:h-screen px-8 lg:px-10 bg-white text-black overflow-hidden flex justify-center items-center">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}

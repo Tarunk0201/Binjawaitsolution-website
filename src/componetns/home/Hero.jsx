@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const heroData = {
   subheadline: "Complete Digital Solution under one Roof",
@@ -74,40 +75,18 @@ const Hero = () => {
 
         {/* CTAs */}
         <motion.div variants={textItemVariants} className="flex gap-4 mb-8">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-3 md:px-6 py-3 rounded-md transition-colors">
-            Get a Free Quote
-          </button>
-          <button className="bg-transparent border border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-md transition-colors">
-            Contact Us
-          </button>
+          <Link to="/contact">
+            <button className="bg-transparent border border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-md transition-colors">
+              Contact Us
+            </button>
+          </Link>
         </motion.div>
 
         {/* Customer Reviews */}
         <motion.div
           variants={textItemVariants}
           className="flex items-center gap-4"
-        >
-          <div className="flex -space-x-2">
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white"
-              src="https://i.pravatar.cc/150?img=48"
-              alt="Customer 1"
-            />
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white"
-              src="https://i.pravatar.cc/150?img=48"
-              alt="Customer 2"
-            />
-            <img
-              className="w-10 h-10 rounded-full border-2 border-white"
-              src="https://i.pravatar.cc/150?img=48"
-              alt="Customer 3"
-            />
-          </div>
-          <div className="text-sm">
-            <p className="font-bold">1K+ Customer Review</p>
-          </div>
-        </motion.div>
+        ></motion.div>
       </motion.div>
     </div>
   );

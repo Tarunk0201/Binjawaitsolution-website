@@ -11,14 +11,18 @@ import { motion } from "framer-motion";
 const complianceCategories = [
   {
     id: "tax-compliance",
-    title: "Tax and Compliance",
+    title: "Tax & Compliance Services",
     icon: <Landmark className="text-amber-600" />,
     bgColor: "bg-amber-50",
     topics: [
       "GST Registration & Filing",
       "ITR & TDS Returns",
+      "Professional Tax Registration & Filing",
       "ESI & PF Registration",
-      "Annual LLP Compliance",
+      "Annual Compliance for Companies & LLPs",
+      "DIN & DSC Services",
+      "Startup India Registration",
+      "Import Export Code (IEC) Registration",
     ],
   },
   {
@@ -28,9 +32,10 @@ const complianceCategories = [
     bgColor: "bg-amber-50",
     topics: [
       "FSSAI Food License",
-      "MSME Registration",
+      "MSME / Udyam Registration",
       "ISO Certification",
-      "Trademark Registration",
+      "Trademark Registration and License",
+      "Digital Signature Certificate (DSC)",
     ],
   },
   {
@@ -39,22 +44,25 @@ const complianceCategories = [
     icon: <Scale className="text-amber-600" />,
     bgColor: "bg-amber-50",
     topics: [
-      "Business Agreements",
+      "Business Agreements & Contracts  ",
       "MOA & AOA Drafting",
-      "Partnership Deeds",
-      "Legal Notices",
+      "Partnership Deeds Drafting",
+      "Rent Agreement",
+      "Affidavit & Notary Services",
+      "Legal Notices & NOC Preparation",
     ],
   },
   {
     id: "accounting-finance",
-    title: "Accounting and Finance",
+    title: "Accounting & Financial",
     icon: <BookOpen className="text-amber-600" />,
     bgColor: "bg-amber-50",
     topics: [
-      "Bookkeeping & Audit",
-      "Financial Statements",
-      "Project Reports",
-      "CA Consultation",
+      "Accounting & Bookkeeping",
+      "Audit Services",
+      "Financial Statements Preparation",
+      "Project Reports for Loans",
+      "CA Consultation Services",
     ],
   },
 ];
@@ -67,7 +75,7 @@ export function ComplianceGrid() {
   };
 
   return (
-    <section className="py-24 px-8 lg:px-16 bg-white">
+    <section className="py-12 px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-serif font-bold text-gray-900">

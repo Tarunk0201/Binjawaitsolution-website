@@ -13,8 +13,8 @@ export default function Compliance() {
       <ComplianceHero />
       <ComplianceGrid />
       <TaxDetail />
-      <LegalAccountingDetail />
       <LicensesDetail />
+      <LegalAccountingDetail />
       <AccountingDetail />
     </>
   );

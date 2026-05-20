@@ -14,7 +14,7 @@ export function AIAssistantDetail() {
   return (
     <section
       id="ai-assistants"
-      className="py-24 px-8 lg:px-16 bg-white scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-white scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
         <div className="lg:w-1/2">
@@ -45,14 +45,11 @@ export function AIAssistantDetail() {
               </p>
             </div>
           </div>
-          <button className="mt-10 flex items-center gap-3 bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-700 transition-all shadow-lg">
-            Deploy an AI Agent <ArrowRight size={20} />
-          </button>
         </div>
         <div className="lg:w-1/2 lg:sticky lg:top-24">
           <img
             src={ai}
-            className="rounded-[2.5rem] shadow-2xl border-4 border-white aspect-video object-cover"
+            className="rounded-[2.5rem] border-4 border-white aspect-video object-cover"
             alt="AI Interface"
           />
         </div>
@@ -66,7 +63,7 @@ export function AIWorkflowDetail() {
   return (
     <section
       id="workflow-automation"
-      className="py-24 px-8 lg:px-16 bg-[#f9f5ff] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#f9f5ff] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         <div className="lg:w-1/2">
@@ -96,15 +93,12 @@ export function AIWorkflowDetail() {
               </div>
             ))}
           </div>
-          <button className="mt-10 flex items-center gap-3 bg-purple-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-purple-700 transition-all shadow-lg">
-            Automate My Workflow <ArrowRight size={20} />
-          </button>
         </div>
         <div className="lg:w-1/2 lg:sticky lg:top-24">
-          <div className="rounded-3xl shadow-2xl max-w-112.5 mx-auto overflow-hidden">
+          <div className="rounded-3xl max-w-[36rem] mx-auto overflow-hidden">
             <img
               src={Autonomous}
-              className="w-full h-auto object-cover rounded-3xl"
+              className="w-full h-[28rem] object-contain rounded-3xl"
               alt="AI Dashboard"
             />
           </div>

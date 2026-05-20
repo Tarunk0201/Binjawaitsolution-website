@@ -11,6 +11,10 @@ import DigitalMarketing from "./componetns/pages/DigitalMarketing";
 import AgenticAI from "./componetns/pages/AgenticAI";
 import Compliance from "./componetns/pages/Compliance";
 import LegalNotice from "./componetns/LegalNotice";
+import BlogPage from "./componetns/Blog/BlogPage";
+import AllBlogsPage from "./componetns/Blog/AllBlogsPage";
+import JobPage from "./componetns/JobPage";
+import JobDetailsPage from "./componetns/JobDetailsPage";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -40,8 +44,11 @@ function App() {
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/ai-solutions" element={<AgenticAI />} />
             <Route path="/compliance" element={<Compliance />} />
-            {/* <Route path="/services" element={<ServicesPage />} />
-            <Route path="/blog" element={<BlogPage />} /> */}
+            {/* <Route path="/services" element={<ServicesPage />} /> */}
+            <Route path="/jobs" element={<JobPage />} />
+            <Route path="/job/:id" element={<JobDetailsPage />} />
+            <Route path="/blog/:id" element={<BlogPage />} />
+            <Route path="/blogs" element={<AllBlogsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<LegalNotice />} />
           </Routes>

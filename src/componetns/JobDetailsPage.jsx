@@ -1,0 +1,265 @@
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Briefcase,
+  Clock,
+  CheckSquare,
+  Award,
+  TrendingUp,
+  Users,
+  MessageSquare,
+  ArrowLeft,
+} from "lucide-react";
+
+const JobDetailsPage = () => {
+  const { id } = useParams();
+  const [job, setJob] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchJobDetails = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_BASE_URL}/openings/${id}`,
+        );
+        const data = await response.json();
+        setJob(data);
+      } catch (error) {
+        console.error("Error fetching job details:", error);
+      }
+    };
+
+    if (id) {
+      fetchJobDetails();
+    }
+  }, [id]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+
+  if (!job) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-lg text-gray-600">Loading...</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 font-sans pt-24">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-8"
+        >
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center text-gray-500 hover:text-orange-600 transition-colors duration-300 group"
+          >
+            <ArrowLeft
+              size={20}
+              className="mr-2 transform group-hover:-translate-x-1 transition-transform duration-300"
+            />
+            <span className="font-semibold">Back to Listings</span>
+          </button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <header className="bg-white rounded-2xl shadow-lg p-8 mb-10">
+            <div className="flex flex-col md:flex-row items-start justify-between">
+              <div>
+                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                  {job.details.title}
+                </h1>
+                <p className="mt-2 text-lg text-orange-500 font-semibold">
+                  {job.details.company}
+                </p>
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mt-6 md:mt-0 bg-orange-500 text-white px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:bg-orange-700 transition-all duration-300"
+              >
+                {job.category === "Job" ? "Apply Now" : "Enroll Now"}
+              </motion.button>
+            </div>
+            <div className="mt-6 pt-6 border-t border-gray-200 flex flex-wrap gap-x-8 gap-y-4 text-gray-600">
+              <div className="flex items-center">
+                <MapPin size={18} className="mr-2 text-gray-400" />
+                <span>{job.details.location}</span>
+              </div>
+              <div className="flex items-center">
+                <Briefcase size={18} className="mr-2 text-gray-400" />
+                <span>{job.details.type}</span>
+              </div>
+              <div className="flex items-center">
+                <Clock size={18} className="mr-2 text-gray-400" />
+                <span>{job.posted}</span>
+              </div>
+            </div>
+          </header>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 lg:grid-cols-3 gap-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <div className="lg:col-span-2">
+            <motion.div
+              variants={itemVariants}
+              className="bg-white rounded-2xl shadow-lg p-8"
+            >
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                {job.category === "Job"
+                  ? "Job Description"
+                  : "Course Description"}
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                {job.details.description}
+              </p>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-10 mb-6">
+                {job.category === "Job"
+                  ? "Key Responsibilities"
+                  : "What You'll Do"}
+              </h3>
+              <ul className="space-y-4">
+                {job.details.responsibilities.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckSquare
+                      className="text-orange-500 mt-1 mr-3 flex-shrink-0"
+                      size={20}
+                    />
+                    <span className="text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="text-xl font-bold text-gray-800 mt-10 mb-6">
+                {job.category === "Job" ? "Qualifications" : "Requirements"}
+              </h3>
+              <ul className="space-y-4">
+                {job.details.qualifications.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <Award
+                      className="text-orange-500 mt-1 mr-3 flex-shrink-0"
+                      size={20}
+                    />
+                    <span className="text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+
+          <div className="space-y-8">
+            <motion.div
+              variants={itemVariants}
+              className="bg-white rounded-2xl shadow-lg p-6"
+            >
+              <h3 className="text-lg font-bold text-gray-800 mb-4">
+                {job.category === "Job" ? "Job Overview" : "Course Overview"}
+              </h3>
+              <div className="space-y-4 text-sm">
+                {job.category === "Job" ? (
+                  <>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">Experience</span>
+                      <span className="font-semibold text-gray-800">
+                        {job.details.experience}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">Salary</span>
+                      <span className="font-semibold text-gray-800">
+                        {job.details.salary}
+                      </span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">Duration</span>
+                      <span className="font-semibold text-gray-800">
+                        {job.details.duration}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-500">Course Fee</span>
+                      <span className="font-semibold text-gray-800">
+                        {job.details.courseFee}
+                      </span>
+                    </div>
+                  </>
+                )}
+                <div className="flex justify-between">
+                  <span className="text-gray-500">
+                    {job.category === "Job" ? "Job Type" : "Format"}
+                  </span>
+                  <span className="font-semibold text-gray-800">
+                    {job.details.type}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="bg-white rounded-2xl shadow-lg p-6"
+            >
+              <h3 className="text-lg font-bold text-gray-800 mb-4">
+                Why Join Us?
+              </h3>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li className="flex items-center">
+                  <TrendingUp size={16} className="mr-2 text-orange-500" />
+                  <span>Career Growth Opportunities</span>
+                </li>
+                <li className="flex items-center">
+                  <Users size={16} className="mr-2 text-orange-500" />
+                  <span>Collaborative Team Culture</span>
+                </li>
+                <li className="flex items-center">
+                  <MessageSquare size={16} className="mr-2 text-orange-500" />
+                  <span>Open Communication Policy</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default JobDetailsPage;

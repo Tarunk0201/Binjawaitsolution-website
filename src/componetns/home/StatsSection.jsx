@@ -20,7 +20,7 @@ const statsData = {
       value: "3 Years",
       label: "In Business",
       description:
-        "Celebrating a decade of innovation, growth, and building strong relationships in the industry.",
+        "Celebrating a 3 Years of innovation, growth, and building strong relationships in the industry.",
     },
   ],
 };
@@ -47,7 +47,7 @@ const cardVariants = {
 const StatsSection = () => {
   return (
     <section className="py-16 px-8 lg:px-16  bg-white text-black">
-      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-xs mb-4">
+      <p className="text-orange-500 block text-center font-bold tracking-[0.2em] uppercase text-md mb-4">
         Achievement
       </p>
       <div className="max-w-7xl mx-auto ">

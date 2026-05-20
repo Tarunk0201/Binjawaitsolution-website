@@ -22,7 +22,7 @@ export default function AICRMDetail() {
   return (
     <section
       id="business-process"
-      className="py-24 px-8 lg:px-16 bg-white scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-white scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
         {/* Left Content */}
@@ -67,9 +67,6 @@ export default function AICRMDetail() {
             ))}
           </div>
 
-          <button className="mt-10 flex items-center gap-3 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg">
-            Upgrade Your CRM <ArrowRight size={20} />
-          </button>
         </motion.div>
 
         {/* Right Visual: Using DreamWheel/Complex project style visuals */}
@@ -79,12 +76,12 @@ export default function AICRMDetail() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative z-10 rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl"
+            className="relative z-10 overflow-hidden aspect-square"
           >
             <img
               src={crm}
               alt="Agentic CRM Interface"
-              className="w-full h-auto object-cover aspect-video"
+              className="w-full h-full object-cover"
             />
           </motion.div>
         </div>

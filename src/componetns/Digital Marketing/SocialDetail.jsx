@@ -8,7 +8,7 @@ export function SEODetail() {
   return (
     <section
       id="seo-domain"
-      className="py-24 px-8 lg:px-16 bg-white scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-white scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
         <div className="lg:w-1/2">
@@ -39,7 +39,7 @@ export function SEODetail() {
           </div>
         </div>
         <motion.div
-          className="lg:w-1/2 lg:sticky lg:top-24"
+          className="lg:w-1/2 lg:sticky lg:top-24 -mt-16"
           animate={{
             y: ["0%", "-2%", "0%"],
           }}
@@ -61,7 +61,7 @@ export function SocialDetail() {
   return (
     <section
       id="social-domain"
-      className="py-24 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         <div className="lg:w-1/2">
@@ -92,10 +92,10 @@ export function SocialDetail() {
           </div>
         </div>
         <div className="lg:w-1/2 lg:sticky lg:top-24">
-          <div className=" bg-white rounded-[3rem] border-12 border-gray-900 shadow-2xl max-w-[320px] mx-auto aspect-9/19 overflow-hidden">
+          <div className="max-w-[420px] mr-auto -mt-12 overflow-hidden">
             <img
               src={Engagement}
-              className="w-full h-full object-cover rounded-4xl"
+              className="w-full h-auto object-cover"
               alt="Social App Mockup"
             />
           </div>
