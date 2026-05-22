@@ -42,8 +42,8 @@ const Navbar = () => {
         { name: "Digital Marketing", href: "/digital-marketing" },
       ],
     },
-    { name: "Blogs", href: "/blogs" },
-    { name: "Jobs", href: "/jobs" },
+    // { name: "Blogs", href: "/blogs" },
+    // { name: "Jobs", href: "/jobs" },
     { name: "Contact", href: "/contact" },
   ];
 
