@@ -4,7 +4,7 @@ import tax from "../../assets/images/tax.jpg";
 
 export default function ComplianceHero() {
   return (
-    <section className="relative py-12 px-8 lg:px-16 bg-white text-black overflow-hidden flex lg:h-screen justify-center items-center">
+    <section className="relative pt-30 md:pt-0 py-12 px-8 lg:px-16 bg-white text-black overflow-hidden flex lg:h-screen justify-center items-center">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}

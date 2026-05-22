@@ -4,7 +4,7 @@ import marketingstrategy from "../../assets/images/marketingstrategy.png";
 
 export default function MarketingHero() {
   return (
-    <section className="relative py-12 lg:h-screen px-8 lg:px-10 bg-white text-black overflow-hidden flex justify-center items-center">
+    <section className="relative pt-30 md:pt-0 py-12 lg:h-screen px-8 lg:px-10 bg-white text-black overflow-hidden flex justify-center items-center">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -34,7 +34,7 @@ export default function MarketingHero() {
           <img
             src={marketingstrategy}
             alt="Marketing Strategy"
-            className="relative z-10 rounded-4xl"
+            className="relative z-10 w-full  lg:max-w-none rounded-4xl"
           />
         </div>
       </div>

@@ -42,7 +42,7 @@ export default function BrandingDetail() {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <div className="rounded-[2.5rem] overflow-visible bg-[#fdf2f0] origin-center mt-28">
+            <div className="rounded-[2.5rem] bg-[#fdf2f0] border-b-4 border-orange-500 overflow-hidden origin-center mt-28">
               <img
                 src={graphic}
                 alt="Creative Branding Session"
@@ -93,7 +93,6 @@ export default function BrandingDetail() {
               </div>
             ))}
           </div>
-
         </motion.div>
       </div>
     </section>

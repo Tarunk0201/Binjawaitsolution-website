@@ -22,7 +22,8 @@ const ContactPage = () => {
     const toastId = toast.loading("Sending message...");
 
     try {
-      const response = await fetch("/api/send-email", {
+      const baseUrl = import.meta.env.VITE_API_BASE_URL;
+      const response = await fetch(`${baseUrl}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,13 +31,17 @@ const ContactPage = () => {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
-
-      if (result.success) {
-        toast.success("Message sent successfully!", { id: toastId });
-        setFormData({ name: "", email: "", message: "" }); // Clear form
+      if (response.ok) {
+        const result = await response.json();
+        toast.success(result.message || "Message sent successfully!", {
+          id: toastId,
+        });
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        throw new Error(result.message || "Failed to send message.");
+        const errorResult = await response.json().catch(() => ({
+          message: "An unexpected error occurred. Please try again.",
+        }));
+        throw new Error(errorResult.message);
       }
     } catch (error) {
       toast.error(error.message || "An error occurred.", { id: toastId });

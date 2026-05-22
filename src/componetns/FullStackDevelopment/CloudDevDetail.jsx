@@ -94,7 +94,7 @@ const CloudDevDetail = () => {
               <img
                 src={aws}
                 alt="Cloud Infrastructure Management"
-                className=" aspect-[3/4] object-cover object-center grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                className=" object-cover object-center grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
               />
             </div>
 

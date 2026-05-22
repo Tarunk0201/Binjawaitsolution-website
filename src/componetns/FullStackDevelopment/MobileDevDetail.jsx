@@ -7,7 +7,7 @@ import {
   RefreshCw,
   ArrowRight,
 } from "lucide-react";
-import mob from "../../assets/images/mob.jpg";
+import mob from "../../assets/images/mob.png";
 
 const MobileDevDetail = () => {
   const problemSolvers = [
@@ -36,15 +36,15 @@ const MobileDevDetail = () => {
   return (
     <section
       id="mobile-dev"
-      className="py-12 px-8 lg:px-16 bg-[#fdf2f0] scroll-mt-20"
+      className="py-12 px-8 lg:px-16 bg-white scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-stretch gap-10 xl:gap-12">
         {/* Left Content: The Problem/Solution Messaging */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="lg:w-1/2"
+          className="lg:w-[48%]"
         >
           <div className="flex items-center gap-3 mb-6">
             <div className="p-3 bg-white rounded-xl text-red-500 shadow-sm">
@@ -80,26 +80,25 @@ const MobileDevDetail = () => {
               </div>
             ))}
           </div>
-
         </motion.div>
 
         {/* Right Visual Side */}
-        <div className="lg:w-1/2 relative lg:sticky lg:top-24">
+        <div className="lg:w-[52%] relative lg:sticky lg:top-24 lg:self-stretch flex items-center">
           {/* Decorative Background Element */}
-          <div className="absolute -inset-10 bg-red-500/5 rounded-full blur-3xl" />
+          <div className="absolute -inset-10 " />
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative z-10"
+            className="relative z-10 w-full max-w-none mx-auto"
           >
             {/* Main Mockup Container */}
-            <div className="bg-white rounded-4xl w-full max-w-[320px] mx-auto overflow-hidden aspect-9/19">
+            <div className="bg-transparent w-full overflow-hidden aspect-square">
               <img
                 src={mob}
                 alt="Mobile App Interface"
-                className="w-full h-full object-cover rounded-4xl"
+                className="w-full h-full object-contain"
               />
             </div>
 
@@ -107,7 +106,7 @@ const MobileDevDetail = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -top-6 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
+              className="absolute top-4 left-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
             >
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600">
@@ -127,7 +126,7 @@ const MobileDevDetail = () => {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute bottom-10 -left-10 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
+              className="absolute bottom-4 right-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
             >
               <p className="text-[10px] font-bold text-red-500 uppercase tracking-widest mb-1">
                 Performance

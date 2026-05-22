@@ -28,13 +28,13 @@ export default function BlogPage() {
         const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
         // Fetch main post
-        const postResponse = await fetch(`${baseUrl}/blogs/${id}`);
+        const postResponse = await fetch(`${baseUrl}/api/blogs/${id}`);
         if (!postResponse.ok) throw new Error(`Failed to fetch main post.`);
         const postResult = await postResponse.json();
         setPost(postResult.data);
 
         // Fetch featured posts for sidebar
-        const featuredResponse = await fetch(`${baseUrl}/blogs/latest`);
+        const featuredResponse = await fetch(`${baseUrl}/api/blogs/latest`);
         if (!featuredResponse.ok)
           throw new Error(`Failed to fetch featured posts.`);
         const featuredResult = await featuredResponse.json();
@@ -44,7 +44,7 @@ export default function BlogPage() {
         setFeaturedPosts(featuredData.filter((p) => p._id !== id));
 
         // Fetch previous posts for grid
-        const pastResponse = await fetch(`${baseUrl}/blogs/previous/${id}`);
+        const pastResponse = await fetch(`${baseUrl}/api/blogs/previous/${id}`);
         if (!pastResponse.ok) throw new Error(`Failed to fetch past posts.`);
         const pastResult = await pastResponse.json();
         console.log("Past Posts API Response:", pastResult);
@@ -189,29 +189,29 @@ export default function BlogPage() {
         <h3 className="text-xl font-bold text-gray-900 mb-6 font-serif">
           Past Posts
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {pastPosts.map((pastPost) => (
             <Link to={`/blog/${pastPost._id}`} key={pastPost._id}>
               <div className="flex flex-col group h-full">
                 {/* Image Box with Floating Relative Action Button Arrow */}
-                <div className="relative rounded-xl shadow-sm aspect-[4/3] mb-5">
+                <div className="relative rounded-lg shadow-sm aspect-[4/3] mb-4 overflow-hidden">
                   <img
                     src={pastPost.imageUrl}
                     alt={pastPost.title}
-                    className="w-full h-full object-cover transition-transform rounded-md duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div
-                    className={`absolute bottom-0 right-2 translate-y-1/2 p-4 rounded-xl shadow-md group-hover:bg-orange-600 transition-all duration-300 bg-black text-white`}
+                    className={`absolute bottom-3 right-3 p-3 rounded-lg shadow-md group-hover:bg-orange-600 transition-all duration-300 bg-black text-white`}
                   >
                     <ArrowUpRight
-                      size={20}
+                      size={18}
                       className=" transform group-hover:rotate-45 transition-transform"
                     />
                   </div>
                 </div>
 
                 {/* Text Context Fields */}
-                <h3 className="text-lg font-bold text-gray-900 leading-snug mb-3 tracking-tight group-hover:text-orange-600 transition-colors line-clamp-2">
+                <h3 className="text-sm font-bold text-gray-900 leading-snug mb-3 tracking-tight group-hover:text-orange-600 transition-colors line-clamp-2">
                   {pastPost.title}
                 </h3>
 

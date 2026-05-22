@@ -9,7 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import Analytics from "../../assets/images/Analytics.jpg";
+import Analytics from "../../assets/images/Analytics.png";
 
 export default function AnalyticsDetail() {
   const platformTools = [
@@ -43,18 +43,18 @@ export default function AnalyticsDetail() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:items-start gap-16">
         {/* Visual: Using 'itservices.webp' for a tech-focused feel */}
         <div className="lg:w-1/2 relative lg:sticky lg:top-24">
-          <div className="absolute -inset-10 bg-green-500/5 rounded-full blur-3xl" />
+          <div className="absolute -inset-10" />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <div className="rounded-[2.5rem] overflow-hidden border-8 border-gray-50">
+            <div className="">
               <img
                 src={Analytics}
                 alt="Marketing Analytics Dashboard"
-                className="w-full h-auto object-cover aspect-video"
+                className="w-full h-auto "
               />
             </div>
 
@@ -115,7 +115,6 @@ export default function AnalyticsDetail() {
               </div>
             ))}
           </div>
-
         </motion.div>
       </div>
     </section>

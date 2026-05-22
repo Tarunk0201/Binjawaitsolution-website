@@ -34,7 +34,7 @@ export default function AllBlogsPage() {
       try {
         const baseUrl = import.meta.env.VITE_API_BASE_URL;
         const response = await fetch(
-          `${baseUrl}/blogs?page=${currentPage}&limit=${POSTS_PER_PAGE}`,
+          `${baseUrl}/api/blogs?page=${currentPage}&limit=${POSTS_PER_PAGE}`,
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");

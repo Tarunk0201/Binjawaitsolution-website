@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const heroData = {
-  subheadline: "Complete Digital Solution under one Roof",
-  headline: "Efficient Solutions for Your Problems",
+  subheadline: "Efficient Solutions for Your Problems",
+  headline: "Complete Digital Solution under one Roof",
   paragraph:
     "We provide complete IT solutions including websites, apps, CRM, AI automation, digital marketing, and compliance support to help businesses build, manage, and grow efficiently",
   videoSrc: "/Hero-Video.mp4",

@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { href, Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Wrench, ChevronDown } from "lucide-react";
+import {
+  Menu,
+  X,
+  Phone,
+  Wrench,
+  ChevronDown,
+  Facebook,
+  Instagram,
+} from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -32,9 +42,26 @@ const Navbar = () => {
         { name: "Digital Marketing", href: "/digital-marketing" },
       ],
     },
-    // { name: "Blogs", href: "/blogs" },
-    // { name: "Jobs", href: "/jobs" },
+    { name: "Blogs", href: "/blogs" },
+    { name: "Jobs", href: "/jobs" },
     { name: "Contact", href: "/contact" },
+  ];
+
+  const socialLinks = [
+    {
+      icon: FaLinkedin,
+      href: "https://www.linkedin.com/company/binjwa-it-solutions-pvt-ltd/posts/?feedView=all",
+    },
+    { icon: Instagram, href: "https://www.instagram.com/binjwaitsolutions/" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/people/Binjwaitsolutions/61577198437265/?rdid=pV4ce5snhhLqxgMb&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16cSpGxWmS%2F",
+    },
+    {
+      icon: FaXTwitter,
+      href: "https://x.com/BinjwaITSolutio?t=RiZkuNAkfF1y2zY6hdegtQ&s=08",
+    },
+    // { icon: Youtube, href: "#" },
   ];
 
   useEffect(() => {
@@ -132,13 +159,37 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-4">
+            <div
+              className={`flex space-x-2 transition-colors duration-300 ${
+                useWhiteText ? "text-white" : "text-gray-600"
+              }`}
+            >
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  className="hover:text-orange-500 transition-colors"
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
+            </div>
             <a
-              href="tel:8103174722"
+              href="tel:+919826656189"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium text-sm transition-colors shadow-md"
             >
               <Phone size={16} />
-              <span>+91 81031 74722</span>
+              <span>+91 98266 56189</span>
+            </a>
+            <a
+              href="https://wa.me/919826656189"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white p-2  rounded-full font-medium text-sm transition-colors shadow-md"
+            >
+              <FaWhatsapp size={22} />
             </a>
           </div>
 
@@ -216,12 +267,23 @@ const Navbar = () => {
                   </Link>
                 ),
               )}
-              <a
-                href="tel:1245678900"
-                className="block w-full text-center bg-orange-500 text-white px-6 py-3 rounded-md text-base font-medium"
-              >
-                +91 98266 56189
-              </a>
+
+              <div className="flex items-center gap-4">
+                <a
+                  href="tel:+919826656189"
+                  className="flex-1 text-center bg-orange-500 text-white px-6 py-3 rounded-md text-base font-medium"
+                >
+                  Call Us
+                </a>
+                <a
+                  href="https://wa.me/919826656189"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-green-500 text-white px-6 py-3 rounded-md text-base font-medium"
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

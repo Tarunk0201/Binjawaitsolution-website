@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, TrendingUp, Zap, Target } from "lucide-react";
 import sco from "../../assets/images/sco.png";
-import Engagement from "../../assets/images/Engagement.jpg";
+import Engagement from "../../assets/images/Engagement.png";
 
 // 3.1 SEO Section
 export function SEODetail() {

@@ -30,7 +30,7 @@ const WebDevDetail = () => {
 
   return (
     <section id="web-dev" className="py-12 px-8 lg:px-16 bg-white scroll-mt-20">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch gap-16">
         {/* Left: Content & Problem Solver */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -80,17 +80,16 @@ const WebDevDetail = () => {
               </div>
             ))}
           </div>
-
         </motion.div>
 
         {/* Right: Visual Element */}
-        <div className="lg:w-1/2 relative lg:sticky lg:top-24 lg:self-start">
-          <div className="relative z-10 rounded-[2.5rem] overflow-hidden">
+        <div className="lg:w-1/2 relative lg:sticky lg:top-24 lg:self-stretch">
+          <div className="relative z-10  rounded-[2.5rem] overflow-hidden">
             {/* Context: Highlighting your work like DreamWheel or SwasthFit backend */}
             <img
               src={dashboard}
               alt="Web Development Dashboard"
-              className="w-full h-auto object-contain aspect-4/3 grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-contain object-top scale-90 grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
             />
             {/* Floating Tech Badge */}
             <div className="absolute bg-amber-100 bottom-6 right-6 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/20">

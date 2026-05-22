@@ -22,7 +22,7 @@ const JobPage = () => {
     const fetchJobs = async () => {
       try {
         const response = await fetch(
-          `${import.meta.env.VITE_API_BASE_URL}/openings`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/openings`,
         );
         const data = await response.json();
         setJobs(data);

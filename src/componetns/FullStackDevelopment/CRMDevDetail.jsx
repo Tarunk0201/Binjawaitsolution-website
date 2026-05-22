@@ -36,7 +36,7 @@ const CRMDevDetail = () => {
 
   return (
     <section id="crm-dev" className="py-12 px-8 lg:px-16 bg-white scroll-mt-20">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-16">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch gap-16">
         {/* Left Content: Business Problem Solving */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -82,25 +82,24 @@ const CRMDevDetail = () => {
               </div>
             ))}
           </div>
-
         </motion.div>
 
         {/* Right Visual Side: Dashboard/Data Visualization Feel */}
-        <div className="lg:w-1/2 relative lg:sticky lg:top-24">
+        <div className="lg:w-1/2 relative  lg:sticky lg:top-24">
           <div className="absolute -inset-10 bg-orange-500/5 rounded-full blur-3xl" />
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative z-10 p-4 bg-white rounded-[2.5rem] border border-gray-100"
+            className="relative z-10 w-full p-4 bg-white rounded-[2.5rem] border border-gray-100"
           >
             {/* Using your "chooseimage2" asset to represent complex data/strategy */}
-            <div className="rounded-[1.8rem] overflow-hidden border-4 border-gray-50">
+            <div className="flex w-full items-center justify-center rounded-[1.8rem] overflow-hidden border-4 border-gray-50">
               <img
                 src={crm}
                 alt="CRM Data Management"
-                className="w-full h-auto object-cover aspect-video"
+                className="object-contain"
               />
             </div>
 

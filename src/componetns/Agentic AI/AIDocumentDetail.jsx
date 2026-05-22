@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FileText, Search, ShieldCheck, Zap, ArrowRight } from "lucide-react";
-import AIenabled from "../../assets/images/AI-enabled.jpg";
+import AIenabled from "../../assets/images/AI-enabled.png";
 
 export function AIDocumentDetail() {
   return (
@@ -63,36 +63,35 @@ export function AIDocumentDetail() {
               </div>
             ))}
           </div>
-
         </motion.div>
 
         {/* Left Visual: Using itservices.webp for a technical/infrastructure feel */}
         <div className="lg:w-1/2 relative lg:sticky lg:top-24">
-          <div className="absolute -inset-10 bg-blue-500/5 rounded-full blur-3xl" />
+          <div className="absolute -inset-10 " />
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative z-10"
+            className="relative z-10 w-full"
           >
-            <div className="">
+            <div className="relative">
               <img
                 src={AIenabled}
                 alt="AI Document Processing"
-                className="rounded-[2.5rem] object-cover aspect-video grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                className="w-full rounded-[2.5rem] object-contain aspect-square grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
               />
-            </div>
 
-            {/* Floating Status Badge */}
-            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-blue-50">
-              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">
-                Audit Status
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-sm font-bold text-gray-900">
-                  Compliant & Processed
-                </span>
+              {/* Floating Status Badge */}
+              <div className="absolute top-[68%] -right-3 bg-white p-6 rounded-2xl shadow-xl border border-blue-50">
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">
+                  Audit Status
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-sm font-bold text-gray-900">
+                    Compliant & Processed
+                  </span>
+                </div>
               </div>
             </div>
           </motion.div>
