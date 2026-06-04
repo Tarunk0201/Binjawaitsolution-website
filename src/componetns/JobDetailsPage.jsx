@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -12,10 +13,12 @@ import {
   MessageSquare,
   ArrowLeft,
 } from "lucide-react";
+import ApplyModal from "./ApplyModal";
 
 const JobDetailsPage = () => {
   const { id } = useParams();
   const [job, setJob] = useState(null);
+  const [modalJobId, setModalJobId] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -69,6 +72,10 @@ const JobDetailsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans pt-24">
+      <Helmet>
+        <title>{`${job.details.title} | Binjwa IT Solutions`}</title>
+        <meta name="description" content={job.details.description} />
+      </Helmet>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -104,6 +111,10 @@ const JobDetailsPage = () => {
                 </p>
               </div>
               <motion.button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setModalJobId(job._id);
+                }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 md:mt-0 bg-orange-500 text-white px-8 py-3 rounded-lg font-bold text-lg shadow-md hover:bg-orange-700 transition-all duration-300"
@@ -258,6 +269,9 @@ const JobDetailsPage = () => {
           </div>
         </motion.div>
       </div>
+      {modalJobId && (
+        <ApplyModal jobId={modalJobId} onClose={() => setModalJobId(null)} />
+      )}
     </div>
   );
 };

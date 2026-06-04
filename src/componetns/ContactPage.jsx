@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import { MapPin, Phone, Mail } from "lucide-react";
 import toast from "react-hot-toast";
 
@@ -51,6 +52,13 @@ const ContactPage = () => {
   };
   return (
     <section className="min-h-screen bg-white py-24 px-8 lg:px-16 flex items-center">
+      <Helmet>
+        <title>Contact Us | Binjawa IT Solutions</title>
+        <meta
+          name="description"
+          content="Get in touch with Binjawa IT Solutions. We're here to answer your questions and help you with your IT needs. Contact us today!"
+        />
+      </Helmet>
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Left Column: Contact Info */}
         <motion.div

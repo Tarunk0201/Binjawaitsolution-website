@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./componetns/Navbar";
@@ -14,6 +14,7 @@ import LegalNotice from "./componetns/LegalNotice";
 import BlogPage from "./componetns/Blog/BlogPage";
 import AllBlogsPage from "./componetns/Blog/AllBlogsPage";
 import JobPage from "./componetns/JobPage";
+import Banner from "./componetns/Compliance/Banner/Banner";
 import JobDetailsPage from "./componetns/JobDetailsPage";
 
 const ScrollToTop = () => {
@@ -27,11 +28,34 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  const [showBanner, setShowBanner] = useState(false);
+
+  useEffect(() => {
+    const hasSeenBanner = localStorage.getItem("hasSeenBanner");
+    if (!hasSeenBanner) {
+      const timer = setTimeout(() => {
+        setShowBanner(true);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleShowBanner = () => {
+    localStorage.removeItem("hasSeenBanner");
+    setShowBanner(true);
+  };
+
+  const handleCloseBanner = () => {
+    setShowBanner(false);
+    localStorage.setItem("hasSeenBanner", "true");
+  };
+
   return (
     <>
+      <Banner showBanner={showBanner} handleCloseBanner={handleCloseBanner} />
       <Toaster position="top-center" reverseOrder={false} />
       <div className="bg-white overflow-x-hidden">
-        <Navbar />
+        <Navbar handleShowBanner={handleShowBanner} />
         <ScrollToTop />
         <main>
           <Routes>

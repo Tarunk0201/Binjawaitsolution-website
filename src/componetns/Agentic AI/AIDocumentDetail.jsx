@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FileText, Search, ShieldCheck, Zap, ArrowRight } from "lucide-react";
+import { MessageSquare, Megaphone, Layers, Bot, Sliders } from "lucide-react";
 import AIenabled from "../../assets/images/AI-enabled.png";
 
 export function AIDocumentDetail() {
@@ -18,45 +18,50 @@ export function AIDocumentDetail() {
           className="lg:w-1/2"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-white rounded-xl text-blue-500 shadow-sm">
-              <FileText size={28} />
+            <div className="p-3 bg-white rounded-xl text-emerald-500 shadow-sm">
+              <MessageSquare size={28} />
             </div>
-            <span className="text-blue-600 font-bold tracking-widest uppercase text-xs">
-              Document Intelligence
+            <span className="text-emerald-600 font-bold tracking-widest uppercase text-xs">
+              WhatsApp & API Automation
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
-            Turn your documents into <br />
-            <span className="text-blue-600">Actionable Insights.</span>
+            Scale your engagement with <br />
+            <span className="text-emerald-600">Intelligent Workflows.</span>
           </h2>
 
           <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-            Manual document auditing is slow and error-prone. We solve the data
-            extraction bottleneck by deploying AI agents that categorize,
-            summarize, and audit your files with 99% accuracy.
+            Manual client communication limits your growth. We eliminate the
+            conversation bottleneck by deploying automated WhatsApp workflows
+            and custom API integrations to engage leads and broadcast updates
+            instantly.
           </p>
 
           <div className="space-y-4">
             {[
               {
-                title: "Automated Data Extraction",
-                icon: <Search size={18} />,
+                title: "Bulk broadcast & notifications",
+                icon: <Megaphone size={18} />,
               },
               {
-                title: "Legal & Compliance Auditing",
-                icon: <ShieldCheck size={18} />,
+                title: "Interactive chat menus & triggers",
+                icon: <Sliders size={18} />,
               },
               {
-                title: "Bulk Document Categorization",
-                icon: <Zap size={18} />,
+                title: "CRM & lead tracking integration",
+                icon: <Layers size={18} />,
+              },
+              {
+                title: "Automated customer support & FAQs",
+                icon: <Bot size={18} />,
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-blue-100 shadow-sm"
+                className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-emerald-100 shadow-sm"
               >
-                <div className="text-blue-500">{item.icon}</div>
+                <div className="text-emerald-500">{item.icon}</div>
                 <span className="text-gray-700 font-bold text-sm">
                   {item.title}
                 </span>
@@ -65,7 +70,7 @@ export function AIDocumentDetail() {
           </div>
         </motion.div>
 
-        {/* Left Visual: Using itservices.webp for a technical/infrastructure feel */}
+        {/* Left Visual */}
         <div className="lg:w-1/2 relative lg:sticky lg:top-24">
           <div className="absolute -inset-10 " />
           <motion.div
@@ -77,19 +82,19 @@ export function AIDocumentDetail() {
             <div className="relative">
               <img
                 src={AIenabled}
-                alt="AI Document Processing"
-                className="w-full rounded-[2.5rem] object-contain aspect-square grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                alt="WhatsApp and API Automation"
+                className="w-full rounded-[2.5rem] object-contain  grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
               />
 
               {/* Floating Status Badge */}
-              <div className="absolute top-[68%] -right-3 bg-white p-6 rounded-2xl shadow-xl border border-blue-50">
+              <div className="absolute top-[68%] -right-3 bg-white p-6 rounded-2xl shadow-xl border border-emerald-50">
                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">
-                  Audit Status
+                  API Gateway Status
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   <span className="text-sm font-bold text-gray-900">
-                    Compliant & Processed
+                    Connected & Live
                   </span>
                 </div>
               </div>

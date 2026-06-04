@@ -34,7 +34,7 @@ export default function MarketingHero() {
           <img
             src={marketingstrategy}
             alt="Marketing Strategy"
-            className="relative z-10 w-full  lg:max-w-none rounded-4xl"
+            className="relative z-10 w-full pt-10 lg:max-w-none rounded-4xl"
           />
         </div>
       </div>

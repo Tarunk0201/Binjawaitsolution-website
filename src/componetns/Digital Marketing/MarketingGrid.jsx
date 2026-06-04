@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, Share2, Palette, BarChart, ChevronRight } from "lucide-react";
+import { Search, Share2, Palette, Users, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const marketingCategories = [
@@ -40,15 +40,15 @@ const marketingCategories = [
     ],
   },
   {
-    id: "platforms-domain",
-    title: "Analytics & Platforms",
-    icon: <BarChart className="text-green-500" />,
-    bgColor: "bg-green-50",
+    id: "platforms-domainplatforms-domain",
+    title: "SMO & SMM Operations",
+    icon: <Users className="text-indigo-500" />,
+    bgColor: "bg-indigo-50",
     topics: [
-      "Google Analytics",
-      "Search Console",
-      "Meta Ad Manager",
-      "YouTube Performance",
+      "Profile Optimization & Branding (SMO)",
+      "Content Strategy & Scheduling",
+      "Meta & Paid Ad Campaigns (SMM)",
+      "Audience Engagement & Growth Tracking",
     ],
   },
 ];

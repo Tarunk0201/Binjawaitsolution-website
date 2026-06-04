@@ -8,6 +8,7 @@ import {
   FileText,
   Network,
   ChevronRight,
+  MessageCirclePlus,
 } from "lucide-react";
 
 const aiCategories = [
@@ -42,21 +43,21 @@ const aiCategories = [
     bgColor: "bg-indigo-50",
     topics: [
       "AI-Agentic CRM systems",
-      "Lead scoring & nurturing",
+      "Lead scoring & Nurturing",
       "Automated outreach",
       "Client lifecycle management",
     ],
   },
   {
     id: "document-processing",
-    title: "Intelligent Document Processing",
-    icon: <FileText className="text-blue-500" />,
-    bgColor: "bg-blue-50",
+    title: "WhatsApp & API Automation",
+    icon: <MessageCirclePlus className="text-green-500" />,
+    bgColor: "bg-green-50",
     topics: [
-      "Automated data extraction",
-      "Document summarization",
-      "Legal & compliance auditing",
-      "Bulk processing",
+      "Bulk broadcast & notifications",
+      "Interactive chat menus & triggers",
+      "CRM & lead tracking integration",
+      "Automated customer support & FAQs",
     ],
   },
 ];

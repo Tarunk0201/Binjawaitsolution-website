@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import {
   ArrowUpRight,
   Eye,
@@ -81,6 +82,13 @@ export default function AllBlogsPage() {
 
   return (
     <div className="bg-[#faf9f6] min-h-screen pt-32 py-16 px-4 md:px-8">
+      <Helmet>
+        <title>Our Blog | Binjawa IT Solutions</title>
+        <meta
+          name="description"
+          content="Explore the latest insights, updates, and strategies from our experts at Binjawa IT Solutions. Stay informed on industry trends and best practices."
+        />
+      </Helmet>
       {/* Dynamic Upper Intro Header Panel Block */}
       <div className="max-w-7xl mx-auto mb-16 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-gray-200/60 pb-8">
         <div>

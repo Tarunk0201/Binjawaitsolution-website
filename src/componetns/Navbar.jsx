@@ -8,12 +8,13 @@ import {
   ChevronDown,
   Facebook,
   Instagram,
+  Gift,
 } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ handleShowBanner }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
@@ -42,8 +43,8 @@ const Navbar = () => {
         { name: "Digital Marketing", href: "/digital-marketing" },
       ],
     },
-    // { name: "Blogs", href: "/blogs" },
-    // { name: "Jobs", href: "/jobs" },
+    { name: "Blogs", href: "/blogs" },
+    { name: "Careers", href: "/jobs" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -160,6 +161,18 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
+            <button
+              onClick={handleShowBanner}
+              className={`relative flex items-center hover:text-orange-500 transition-colors ${
+                useWhiteText ? "text-white" : "text-gray-600"
+              }`}
+            >
+              <div className="ml-2">
+                <span className="relative inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 animate-pulse">
+                  NEW
+                </span>
+              </div>
+            </button>
             <div
               className={`flex space-x-2 transition-colors duration-300 ${
                 useWhiteText ? "text-white" : "text-gray-600"

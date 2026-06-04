@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -95,6 +96,13 @@ const JobPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
+      <Helmet>
+        <title>Job Openings | Binjwa IT Solutions</title>
+        <meta
+          name="description"
+          content="Find your next career opportunity at Binjwa IT Solutions. Browse our open positions and apply today."
+        />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">

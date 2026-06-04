@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import {
   Clock,
@@ -94,6 +95,10 @@ export default function BlogPage() {
       transition={{ duration: 0.5 }}
       className="bg-white min-h-screen font-sans"
     >
+      <Helmet>
+        <title>{`${post.title} | Binjwa IT Solutions Blog`}</title>
+        <meta name="description" content={post.paragraphs[0]} />
+      </Helmet>
       {/* SECTION 1: TOP HERO AND FEATURED SIDEBAR LAYOUT */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-24 pb-10">
         <div className="mb-8">

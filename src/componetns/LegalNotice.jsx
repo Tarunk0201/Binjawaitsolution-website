@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import {
   ShieldCheck,
   Lock,
@@ -20,6 +21,13 @@ const LegalNotice = () => {
 
   return (
     <div className="bg-[#fdf8f1] min-h-screen py-20 px-6 lg:px-16 text-gray-800 font-sans">
+      <Helmet>
+        <title>Privacy Policy | Binjawa IT Solutions</title>
+        <meta
+          name="description"
+          content="Read the privacy policy of Binjawa IT Solutions to understand how we collect, use, and protect your personal information."
+        />
+      </Helmet>
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <motion.div
